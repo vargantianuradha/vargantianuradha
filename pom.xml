@@ -27,7 +27,18 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>ip-172-31-33-127.ap-south-1.compute.internal-releases</name>
+        <url>http://65.0.92.120:8081/artifactory/libs-release</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>ip-172-31-33-127.ap-south-1.compute.internal-snapshots</name>
+        <url>http://65.0.92.120:8081//artifactory/libs-snapshot</url>
+    </snapshotRepository>
+</distributionManagement>
   <build>
     <finalName>flyhighwebapp</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
