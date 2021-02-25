@@ -13,20 +13,4 @@ pipeline {
                 '''
             }
         }
-    stage('pull') {
-               steps {
-            git(url: 'https://github.com/vargantianuradha/flyhighproject.git', branch: 'master')
-          }
-        }
-
-        stage('build') {
-          steps {
-            echo 'inside build'
-             sh 'mvn -Dmaven.test.failure.ignore=true install'
-          }
-        }
   }
-  environment {
-    stage = 'build'
-  }
-}
