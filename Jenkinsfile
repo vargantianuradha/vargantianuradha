@@ -10,7 +10,7 @@ pipeline {
         stage('build') {
           steps {
             echo 'inside build'
-             sh `mvn clean install`
+             sh `./build.sh`
           }
         }
   }
