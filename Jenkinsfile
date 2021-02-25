@@ -2,8 +2,25 @@ pipeline {
   agent any
   stages {
     stage('pull') {
+      parallel {
+        stage('pull') {
+          steps {
+            git(url: 'https://github.com/vargantianuradha/flyhighproject.git', branch: 'master')
+          }
+        }
+
+        stage('build') {
+          steps {
+            echo 'inside build'
+          }
+        }
+
+      }
+    }
+
+    stage('build') {
       steps {
-        git(url: 'https://github.com/vargantianuradha/flyhighproject.git', branch: 'master')
+        sh 'mvn clean install'
       }
     }
 
