@@ -25,6 +25,7 @@ pipeline {
     stage('ArchiveArtifacts') {
       steps {
         archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
+        archiveArtifacts(artifacts: 'target/flyhighwebapp.war', fingerprint: true)
       }
     }
 
