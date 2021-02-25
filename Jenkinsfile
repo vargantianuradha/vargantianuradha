@@ -10,7 +10,7 @@ pipeline {
         stage('build') {
           steps {
             echo 'inside build'
-             sh `./build.sh`
+             sh 'mvn -B -DskipTests clean package'
           }
         }
   }
