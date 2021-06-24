@@ -80,7 +80,7 @@
     <snapshotRepository>
       <id>nexus</id>
       <name>Snapshot</name>
-      <url>http://localhost:8081/repository/maven-snapshots</url>
+      <url>http://65.0.133.194:8081/repository/maven-snapshots</url>
     </snapshotRepository>
       </plugins>
     </pluginManagement>
